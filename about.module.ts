@@ -1,11 +1,16 @@
 import {NgModule} from '@angular/core';
-import {AboutComponent} from "./components/about.component.ts";
 import {RouterModule, Routes} from "@angular/router";
+import {AboutComponent} from "./components/about.component";
+import {ListComponent} from "./components/list.component";
 
 const childRouter:Routes = [
   {
     path: '',
     component: AboutComponent
+  },
+  {
+    path: "list",
+    component: ListComponent
   }
 ];
 @NgModule({
@@ -13,7 +18,8 @@ const childRouter:Routes = [
     RouterModule.forChild(childRouter)
   ],
   declarations: [
-    AboutComponent
+    AboutComponent,
+    ListComponent
   ]
 })
 export class AboutModule {
